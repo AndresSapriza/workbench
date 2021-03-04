@@ -5,8 +5,8 @@
     "start": "http-server ./build",
     "scss": "node-sass src/sass -o src/css",
     "clean:build": "rimraf ./build && mkdir build",
-    "prebuild": "run-p clean:build",
-    "build": "webpack --config webpack.config.prod.js"
+    "preheroku-postbuild": "run-p clean:build",
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {
     "bootstrap": "4.3.1",
