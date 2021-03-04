@@ -9,7 +9,7 @@ const LoginForm = ({ user, onSave, onChange, saving = false, errors = {} }) => {
       <Row className="justify-content-md-center">
         <Col>
           <Form className="p-2" onSubmit={onSave}>
-            <h3>doitCRM</h3>
+            <h3>Workbench</h3>
             <hr />
             <Form.Group>
               <Form.Label>Your name</Form.Label>

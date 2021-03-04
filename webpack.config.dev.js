@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.API_URL": JSON.stringify("http://localhost:4000"),
+      "process.env.API_URL": JSON.stringify("https://workbench-server-api.herokuapp.com"),
     }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
