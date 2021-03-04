@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import LoginForm from "./loginForm";
 import * as authActions from "../../redux/actions/authActions";
 import { newUser } from "../../../tools/mockData";
-import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 
 const Login = ({ login, ...props }) => {
@@ -29,7 +28,7 @@ const Login = ({ login, ...props }) => {
   }
 
   function formIsValid() {
-    const { name, password } = user;
+    const { name } = user;
     const errors = {};
 
     if (!name) errors.name = "Please inert your name";

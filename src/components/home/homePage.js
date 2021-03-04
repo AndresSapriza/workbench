@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Navbar, Nav, Form } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { newUser } from "../../../tools/mockData";
 import * as authActions from "../../redux/actions/authActions";
 

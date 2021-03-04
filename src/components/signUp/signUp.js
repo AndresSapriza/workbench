@@ -1,33 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import SignUpForm from "./signUpForm";
 import * as authActions from "../../redux/actions/authActions";
 import { newUser } from "../../../tools/mockData";
 import Validator from "validator";
-import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 
 const SignUp = ({ signUp, ...props }) => {
   const [user, setUser] = useState({ ...props.user });
   const [errors, setErrors] = useState({ name: null, email: null });
-  // const [firstTime, setFirstTime] = useState(true);
 
   let history = useHistory();
-  // useEffect(() => {
-  //   if (!firstTime) formIsValid("name");
-  //   setFirstTime(false);
-  // }, [user.name]);
-
-  // useEffect(() => {
-  //   if (!firstTime) formIsValid("email");
-  //   setFirstTime(false);
-  // }, [user.email]);
-
-  // useEffect(() => {
-  //   if (!firstTime) formIsValid("password");
-  //   setFirstTime(false);
-  // }, [user.password]);
 
   function handleChange(event) {
     if (event.target) {
@@ -41,8 +25,7 @@ const SignUp = ({ signUp, ...props }) => {
   }
 
   function formIsValid(target) {
-    const { name, password, email } = target;
-    debugger;
+    const { name, email } = target;
 
     if (name !== undefined) {
       if (!name) {

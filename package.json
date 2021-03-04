@@ -2,11 +2,10 @@
   "name": "ps-redux",
   "description": "React and Redux Pluralsight course by Cory House",
   "scripts": {
-    "start": "run-p start:dev start:api",
-    "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
-    "prestart:api": "node tools/createMockDb.js",
-    "start:api": "node tools/apiServer.js",
-    "scss": "node-sass src/sass -o src/css"
+    "scss": "node-sass src/sass -o src/css",
+    "clean:build": "rimraf ./build && mkdir build",
+    "prebuild": "run-p clean:build",
+    "build": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {
     "bootstrap": "4.3.1",
