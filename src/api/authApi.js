@@ -7,6 +7,7 @@ export function getUserLogged() {
 }
 
 export function login(user) {
+  console.log(process.env.API_URL);
   const config = getConfig({ method: "POST", body: JSON.stringify(user) });
   return fetch(baseUrl, config).then(handleResponse).catch(handleError);
 }
