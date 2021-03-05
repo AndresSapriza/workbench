@@ -64,7 +64,7 @@ const LoginForm = ({ user, onSave, onChange, saving = false, errors = {} }) => {
                 <Form.Label className="text-muted">
                   {"Not a member?"}
                 </Form.Label>
-                <a href="signup" className="stretched-link mx-1">
+                <a href="/#/signup" className="stretched-link mx-1">
                   Sign up
                 </a>
               </Col>

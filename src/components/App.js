@@ -20,8 +20,8 @@ function App({ loadLoggedUser }) {
     <div>
       <Switch>
         <PrivateRoute exact path="/" component={HomePage} />
-        <PublicRoute exact path="/login" component={Login} restricted />
-        <PublicRoute exact path="/signup" component={SignUp} restricted />
+        <PublicRoute exact path="/#/login" component={Login} restricted />
+        <PublicRoute exact path="/#/signup" component={SignUp} restricted />
         <Route component={PageNotFound} />
       </Switch>
     </div>
