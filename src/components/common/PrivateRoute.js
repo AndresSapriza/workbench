@@ -28,16 +28,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(PrivateRoute);
-
-// export const PublicRoute = ({ component: Component, restricted, ...rest }) => {
-//   <Route
-//     {...rest}
-//     render={(props) =>
-//       localStorage.getItem("token") && restricted ? (
-//         <Redirect to="/" />
-//       ) : (
-//         <Component {...props} />
-//       )
-//     }
-//   />;
-// };
