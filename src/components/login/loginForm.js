@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Form, Container, Row, Col, Button, Alert } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 const LoginForm = ({ user, onSave, onChange, saving = false, errors = {} }) => {
   return (
@@ -65,9 +64,9 @@ const LoginForm = ({ user, onSave, onChange, saving = false, errors = {} }) => {
                 <Form.Label className="text-muted">
                   {"Not a member?"}
                 </Form.Label>
-                <Link to="/signup" className="stretched-link mx-1">
+                <a href="/signup" className="stretched-link mx-1">
                   Sign up
-                </Link>
+                </a>
               </Col>
             </Row>
           </Form>
