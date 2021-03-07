@@ -2,7 +2,8 @@
   "name": "ps-redux",
   "description": "React and Redux Pluralsight course by Cory House",
   "scripts": {
-    "start": "http-server ./build",
+    "start": "run-p start:dev ",
+    "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
     "scss": "node-sass src/sass -o src/css",
     "clean:build": "rimraf ./build && mkdir build",
     "preheroku-postbuild": "run-p clean:build",
