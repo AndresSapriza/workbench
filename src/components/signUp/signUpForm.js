@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Form, Container, Row, Col, Button, Alert } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const SignUpForm = ({
   user,
@@ -20,9 +21,9 @@ const SignUpForm = ({
                 <h3>Sign Up!</h3>
               </Col>
               <Col xs={4} sm={2}>
-                <a href="/login" className="stretched-link my-2 f-right">
+                <Link to="login" className="stretched-link my-2 f-right">
                   Sign in
-                </a>
+                </Link>
               </Col>
             </Row>
             <hr />
