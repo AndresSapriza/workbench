@@ -1,2 +1,11 @@
 @media only screen and (min-width: 768px) {
+  #sidebar {
+    margin-left: 0px;
+  }
+
+  #sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+  }
 } /* end of media query */

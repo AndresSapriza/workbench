@@ -4,7 +4,6 @@ import { Redirect, Route } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const PrivateRoute = ({ isAuthenticated, component: Component, ...rest }) => {
-  debugger;
   return (
     <Route
       {...rest}
@@ -21,7 +20,6 @@ PrivateRoute.propTypes = {
 };
 
 function mapStateToProps(state) {
-  debugger;
   return {
     isAuthenticated: state.auth.isAuthenticated,
   };

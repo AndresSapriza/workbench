@@ -1,30 +1,35 @@
 import React, { useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import * as authActions from "../redux/actions/authActions";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import PageNotFound from "./PageNotFound";
 import Login from "./login/login";
 import SignUp from "./signUp/signUp";
-import "./../css/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./../css/styles.css";
 import HomePage from "./home/homePage";
 import PrivateRoute from "./common/PrivateRoute";
 import PublicRoute from "./common/PublicRoute";
+import Main from "./main/Main";
+import ProjectPage from "./project/ProjectPage";
 
 function App({ loadLoggedUser }) {
   useEffect(() => {
     loadLoggedUser();
   });
   return (
-    <div>
-      <Switch>
-        <PrivateRoute exact path="/" component={HomePage} />
-        <PublicRoute exact path="/login" component={Login} restricted />
-        <PublicRoute exact path="/signup" component={SignUp} restricted />
-        <Route component={PageNotFound} />
-      </Switch>
-    </div>
+    <Switch>
+      <PublicRoute exact path="/login" component={Login} restricted />
+      <PublicRoute exact path="/signup" component={SignUp} restricted />
+      <Main>
+        <Switch>
+          <PrivateRoute exact path="/" component={HomePage} />
+          <PrivateRoute exact path="/project" component={ProjectPage} />
+          <PrivateRoute component={PageNotFound} />
+        </Switch>
+      </Main>
+    </Switch>
   );
 }
 
