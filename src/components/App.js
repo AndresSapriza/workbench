@@ -13,6 +13,7 @@ import PrivateRoute from "./common/PrivateRoute";
 import PublicRoute from "./common/PublicRoute";
 import Main from "./main/Main";
 import ProjectPage from "./project/ProjectPage";
+import Project from "./project/Project";
 
 function App({ loadLoggedUser }) {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App({ loadLoggedUser }) {
         <Switch>
           <PrivateRoute exact path="/" component={HomePage} />
           <PrivateRoute exact path="/project" component={ProjectPage} />
+          <PrivateRoute exact path="/createProject" component={Project} />
           <PrivateRoute component={PageNotFound} />
         </Switch>
       </Main>

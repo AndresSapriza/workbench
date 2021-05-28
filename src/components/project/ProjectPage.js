@@ -1,8 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Row, Col, Container, Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 const ProjectPage = () => {
+  let history = useHistory();
+
+  function createProjectClick(event) {
+    event.preventDefault();
+    let path = "/createProject";
+    history.push(path);
+  }
+
   return (
     <Container>
       <Row>
@@ -16,7 +25,7 @@ const ProjectPage = () => {
           <h5 className="card-title">You currently have no projects</h5>
           <p className="card-text">{"Let's create your first project"}</p>
 
-          <Button>{"Create project"}</Button>
+          <Button onClick={createProjectClick}>{"Create project"}</Button>
         </Col>
       </Row>
     </Container>

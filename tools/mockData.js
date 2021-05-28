@@ -43,7 +43,8 @@ const newProject = {
   id: null,
   name: "",
   description: "",
-  members: [],
+  type: "",
+  admin: "",
 };
 
 // Using CommonJS style export so we can consume via Node (without using Babel-node)
